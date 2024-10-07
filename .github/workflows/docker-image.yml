@@ -24,6 +24,8 @@ jobs:
       
       - name: Create a Tag
         uses: actions/github-script@v7
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         with: 
           script: | 
             github.rest.git.createRef ({ 
