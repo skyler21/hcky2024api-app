@@ -28,7 +28,7 @@ jobs:
           script: | 
             github.rest.git.createRef ({ 
             owner: context.repo.owner, 
-            ref: 'resf/tag/${{ inputs.APP_VER  }}
+            ref: 'refs/tags/${{ inputs.APP_VER  }},
             sha: context.sha
             })
           
