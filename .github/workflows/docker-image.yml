@@ -22,17 +22,17 @@ jobs:
       - name: Checkout from default branch 
         uses: actions/checkout@v4
       
-      - name: Create a Tag
-        uses: actions/github-script@v5
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        with: 
-          script: | 
-            github.rest.git.createRef ({ 
-            owner: context.repo.owner, 
-            ref: 'refs/tags/${{ inputs.APP_VER  }}',
-            sha: context.sha
-            })
+      #- name: Create a Tag
+      #  uses: actions/github-script@v7
+      #  env:
+      #    GITHUB_TOKEN: ${{ github.token }}
+      #  with: 
+      #    script: | 
+      #      github.rest.git.createRef ({ 
+      #      owner: context.repo.owner, 
+      #      ref: 'refs/tags/${{ inputs.APP_VER  }}',
+      #      sha: context.sha
+      #      })
           
       - name: Image Build 
         run: |
