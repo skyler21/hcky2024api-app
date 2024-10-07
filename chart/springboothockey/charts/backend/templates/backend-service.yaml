@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: backendspring
+  name: backendspring
+spec:
+  type: ClusterIP
+  ports:
+    - protocol: "TCP"
+      port: 8085
+      targetPort: 8085
+  selector:
+    app: backendspring
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: "mysqldeployment"
+spec:
+  ports:
+    - name: "mysqldeployment"
+      protocol: "TCP"
+      port: 3306
+      targetPort: 3306 
+      nodePort: 0
+  selector: {}
+---
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: "mysqldeployment" 
+subsets: 
+  - addresses:
+      - ip: "192.168.68.111" 
+    ports:
+      - port: 3306 
+        name: "mysqldeployment"
+---
+

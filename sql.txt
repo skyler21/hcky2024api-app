@@ -1,0 +1,85 @@
+mysql -u root -p
+show tables in db_nhl2024;
+describe game (whatever table name you want)
+quit 
+
+use db_nhl2024
+
+
+select t.team_name
+      ,s.team_games
+      ,s.team_points
+      ,s.team_wins
+      ,s.team_losses
+      ,s.team_ot_losses
+      ,s.team_goals_for
+      ,s.team_goals_against
+      ,s.team_streak
+   from standing s
+       ,team     t
+ where t.team_id = s.team_id    
+ order by team_points desc;  
+ 
+ select game_date
+       ,t1.team_name as 'AWAY'
+       ,t2.team_name as 'HOME'  
+   from game    g
+       ,team    t1
+       ,team    t2 
+ where game_date like '2022-09-27%'       
+ and t1.team_id = g.team_away_id
+ and t2.team_id = g.team_home_id
+ order by game_date; 
+ 
+  select game_date
+       ,t1.abbreviation as 'AWAY'
+       ,s1.team_games as 'GAMES'
+       ,s1.team_points as 'POINTS'
+       ,s1.team_wins  as 'wins'
+       ,s1.team_losses as 'losses'
+       ,s1.team_ot_losses as ' ot ' 
+       ,s1.team_goals_for as ' G F ' 
+       ,s1.team_goals_against as 'G A ' 
+       ,s1.team_streak as 'Streak'
+       ,t2.abbreviation as 'HOME'
+       ,s2.team_games as 'GAMES'
+       ,s2.team_points as 'POINTS' 
+       ,s2.team_wins as 'wins' 
+       ,s2.team_losses as 'losses' 
+       ,s2.team_ot_losses as ' ot ' 
+       ,s2.team_goals_for as ' G F ' 
+       ,s2.team_goals_against as ' G A ' 
+       ,s2.team_streak as 'Streak'        
+   from game     g
+       ,team     t1
+       ,team     t2
+       ,standing s1
+       ,standing s2 
+ where game_date like '2022-09-27%'       
+ and t1.team_id = g.team_away_id
+ and t2.team_id = g.team_home_id
+ and t1.team_id = s1.team_id
+ and t2.team_id = s2.team_id
+ order by game_date;
+========================================================= 
+  
+  NHL2024 database 
+
+SELECT g.game_date
+,CASE
+   when g.game_type = 1 THEN 'PreSeason'
+   when g.game_type = 2 THEN 'Regular'
+   when g.game_type = 3 THEN 'Playoffs'
+END AS game_desc   
+      ,g.eastern_start_time
+      ,t1.full_name as home_team
+      ,g.home_score
+      ,t2.full_name as visitor_team
+      ,g.visiting_score      
+  FROM db_nhl2024.game g
+      ,db_nhl2024.team t1
+      ,db_nhl2024.team t2      
+ where g.season = 20232024
+   and g.home_team_id = t1.team_id
+   and g.visiting_team_id = t2.team_id
+order by eastern_start_time ;

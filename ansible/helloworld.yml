@@ -1,0 +1,39 @@
+## ansible-playbook helloworld.yml -i ansible_hosts
+## ansible-playbook helloworld.yml -i ansible_hosts --ask-pass
+
+---
+- name: Helloworld local
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: run echo
+      shell: 'echo "Hello World !"'
+      register: result
+
+    - debug: var=result.stdout
+
+- name: Helloworld remote
+  hosts: fedoraServer
+  remote_user: "jeff"
+
+  tasks:
+    - name: run echo
+      shell: 'echo "Hello World !"'
+      register: result
+
+    - debug: var=result.stdout
+
+    - name: copy jar to remote
+      copy:
+        src: "/var/lib/jenkins/workspace/hockeySql/target/hockeySql.jar"
+        dest: "~/hockeySql.jar"
+      register: cpyresult
+
+    - debug: var=cpyresult
+
+    - name: list directory
+      shell: "ls -la"
+      register: lsout
+
+    - debug: var=lsout.stdout_lines

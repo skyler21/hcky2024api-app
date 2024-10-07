@@ -1,0 +1,973 @@
+[main] INFO  com.hockey.core.HockeySqlApplication  - HockeySQL application loggerinfo write
+[main] DEBUG com.hockey.core.HockeySqlApplication  - HockeySQL application has started
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.4)
+
+2023-03-16 18:46:19.799  INFO 9843 --- [           main] com.hockey.core.HockeySqlApplication     : Starting HockeySqlApplication v0.0.1-SNAPSHOT using Java 17.0.6 on fedora with PID 9843 (/home/jeff/Downloads/hockeySql/target/hockeySql.jar started by jeff in /home/jeff/Downloads/hockeySql)
+2023-03-16 18:46:19.806  INFO 9843 --- [           main] com.hockey.core.HockeySqlApplication     : No active profile set, falling back to default profiles: default
+2023-03-16 18:46:21.469  INFO 9843 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-16 18:46:21.615  INFO 9843 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 8 JPA repository interfaces.
+2023-03-16 18:46:22.986  INFO 9843 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-03-16 18:46:23.003  INFO 9843 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-16 18:46:23.003  INFO 9843 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2023-03-16 18:46:23.140  INFO 9843 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-16 18:46:23.140  INFO 9843 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3136 ms
+2023-03-16 18:46:23.587  INFO 9843 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-16 18:46:23.689  INFO 9843 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2023-03-16 18:46:23.880  INFO 9843 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-16 18:46:24.030  INFO 9843 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-16 18:46:24.578  INFO 9843 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-16 18:46:24.636  INFO 9843 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-16 18:46:26.333  INFO 9843 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-16 18:46:26.352  INFO 9843 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-16 18:46:27.345  WARN 9843 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-16 18:46:28.119  INFO 9843 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-03-16 18:46:28.138  INFO 9843 --- [           main] com.hockey.core.HockeySqlApplication     : Started HockeySqlApplication in 9.379 seconds (JVM running for 10.481)
+2023-03-16 18:46:47.776  INFO 9843 --- [nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-16 18:46:47.776  INFO 9843 --- [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-16 18:46:47.779  INFO 9843 --- [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - updateGame has been reached
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - selectDate = 2023-03-15%
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - gamePk....2022021076
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - time Remaining Final
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - setGameShootout true
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - gameFromDb .... 2023-03-15 18:00:00 2022021076
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - gamePk....2022021077
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - time Remaining Final
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - setGameShootout true
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - gameFromDb .... 2023-03-15 18:00:00 2022021077
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - gamePk....2022021078
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - time Remaining Final
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - setGameShootout false
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - gameFromDb .... 2023-03-15 20:30:00 2022021078
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - gamePk....2022021079
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - time Remaining Final
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - setGameShootout false
+[http-nio-8085-exec-1] DEBUG com.hockey.core.NhlApiController  - gameFromDb .... 2023-03-15 21:00:00 2022021079
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - updatePlayers has been reached
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - selectDate = 2023-03-16%
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 18.518518
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 21 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 7.4074073
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 21 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 11
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 40.74074
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 21 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 7.4074073
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 21 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 7.4074073
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 21 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 14.814815
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 21 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.7037036
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 21 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 20.689655
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 9 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 17.241379
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 9 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.4482758
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 9 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.4482758
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 9 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 20.689655
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 9 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 17.241379
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 9 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 13.793103
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 9 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.4482758
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 9 2022021080
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 10.714286
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 8 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 10.714286
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 8 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 28.57143
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 8 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 17.857143
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 8 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 25.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 8 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.5714288
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 8 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.5714288
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 8 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 23.076923
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 13 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 19.23077
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 13 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 30.769232
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 13 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 23.076923
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 13 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.846154
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 13 2022021081
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 9
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 32.142857
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 5 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 14.285715
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 5 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 14.285715
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 5 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 7.1428576
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 5 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 28.57143
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 5 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.5714288
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 5 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 17.857143
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 3 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 28.57143
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 3 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 17.857143
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 3 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 10.714286
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 3 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 14.285715
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 3 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 7.1428576
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 3 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.5714288
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 3 2022021082
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 26.923079
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 14 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 15.384616
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 14 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 11.538462
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 14 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 15.384616
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 14 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 26.923079
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 14 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.846154
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 14 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 25.925926
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 1 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 25.925926
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 1 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 14.814815
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 1 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 25.925926
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 1 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 7.4074073
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 1 2022021083
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 10.714286
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 6 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.5714288
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 6 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 25.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 6 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 21.428572
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 6 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.5714288
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 6 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 21.428572
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 6 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 10.714286
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 6 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 28
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.5714288
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 6 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 27.586206
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 52 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 17.241379
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 52 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 24.13793
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 52 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 10.344828
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 52 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 10.344828
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 52 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 6.8965516
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 52 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.4482758
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 52 2022021084
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 12.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 16 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 28.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 16 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 24.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 16 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 8.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 16 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 16.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 16 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 12.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 16 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 15.384616
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 18 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 15.384616
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 18 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.846154
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 18 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 7.692308
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 18 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 11.538462
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 18 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.846154
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 18 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 9
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 9
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 34.615387
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 18 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 7.692308
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 18 2022021085
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 6.666667
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 25 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 23.333334
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 25 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 9
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 30.000002
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 25 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 20.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 25 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.3333335
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 25 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 6.666667
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 25 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 6.666667
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 25 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.3333335
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 25 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 12.903225
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 22 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 25.80645
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 22 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 9.677419
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 22 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 19.354837
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 22 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 12.903225
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 22 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 6.4516125
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 22 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.2258062
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 22 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 6.4516125
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 22 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.2258062
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 22 2022021086
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 24.13793
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 20 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 10.344828
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 20 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 24.13793
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 20 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 10.344828
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 20 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 10.344828
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 20 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 13.793103
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 20 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.4482758
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 20 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 29
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.4482758
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 20 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 19.354837
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 54 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.2258062
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 54 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 9.677419
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 54 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 16.129032
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 54 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 19.354837
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 54 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 25.80645
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 54 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.2258062
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 54 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 31
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.2258062
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 54 2022021087
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 7.4074073
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 23 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 22.222223
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 23 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 14.814815
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 23 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 29.62963
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 23 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 14.814815
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 23 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 7.4074073
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 23 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.7037036
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 23 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 21
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 19.047619
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 53 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 21
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 38.095238
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 53 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 21
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 9.523809
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 53 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 21
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 14.285715
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 53 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 21
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 9.523809
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 53 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 21
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 4.7619047
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 53 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 21
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 4.7619047
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 53 2022021088
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 24.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 29 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 24.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 29 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 28.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 29 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 4.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 29 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 8.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 29 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 25
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 12.0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 29 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 13.333334
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 26 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 23.333334
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 26 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 9
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 9
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 30.000002
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 26 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 6.666667
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 26 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 13.333334
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 26 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 6.666667
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 26 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.3333335
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 26 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 0
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 30
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 3.3333335
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 26 2022021089
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 30.769232
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 55 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 7.692308
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 55 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 15.384616
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 55 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 23.076923
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 55 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 9
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 3.846154
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 55 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 11.538462
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 55 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v saveFrequency .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save GoalCount .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save SumTeam .. 26
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  v save percent .. 7.692308
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE vGoal.. 55 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 8
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 29.62963
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 28 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 6
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 5
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 22.222223
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 28 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 7
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 2
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 25.925926
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 28 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 1
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 11.111112
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 28 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  hgoal.. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h saveFrequency .. 3
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save GoalCount .. 4
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save SumTeam .. 27
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - Goal count  h save percent .. 11.111112
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - SAVE hGoal.. 28 2022021090
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-2] DEBUG com.hockey.core.NhlApiController  - todayTeams....[21, 9, 8, 13, 5, 3, 14, 1, 6, 52, 16, 18, 25, 22, 20, 54, 23, 53, 29, 26, 55, 28]
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - loadStanding has been reached
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - Division id  18
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - Conference id 6
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 12 12
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 1 1
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 3 3
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 5 5
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 2 2
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 15 15
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 4 4
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 29 29
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - Division id  17
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - Conference id 6
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 6 6
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 10 10
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 14 14
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 13 13
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 7 7
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 9 9
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 17 17
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 8 8
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - Division id  16
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - Conference id 5
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 25 25
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 30 30
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 21 21
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 52 52
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 18 18
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 19 19
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 53 53
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 16 16
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - Division id  15
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - Conference id 5
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 54 54
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 26 26
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 22 22
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 55 55
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 20 20
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 23 23
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 24 24
+[http-nio-8085-exec-3] DEBUG com.hockey.core.NhlApiController  - nStanding.. 28 28
+2023-03-16 18:48:43.950  INFO 9843 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-16 18:48:43.953  INFO 9843 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-16 18:48:43.966  INFO 9843 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

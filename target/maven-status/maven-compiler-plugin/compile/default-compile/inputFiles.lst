@@ -1,0 +1,12 @@
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/NhlApiController.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/model/Franchise.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/dao/FranchiseRepository.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/model/Team.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/MainController.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/NhlDbController.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/dao/RosterRepository.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/model/Roster.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/model/Game.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/dao/TeamRepository.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/dao/GameRepository.java
+/home/jeff/github/hockey2024-app/src/main/java/com/hockey/core/HockeySqlApplication.java

@@ -1,0 +1,13 @@
+2023/11/15 - NHL API change 
+   
+
+https://api-web.nhle.com/v1/schedule/now
+
+https://api-web.nhle.com/v1/teams
+
+
+updated
+===============================================
+
+https://api.nhle.com/stats/rest/en/team
+id":11,"franchiseId":35,"fullName":"Atlanta Thrashers","leagueId":133,"rawTricode":"ATL","triCode":"ATL"
