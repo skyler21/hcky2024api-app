@@ -34,7 +34,7 @@ jobs:
           
       - name: Image Build 
         run: |
-          docker login -u ${{ secrets.DOCKER_USER }} -p ${{ DOCKER_PASS }} ${{ env.DOCKER_URL }}
+          docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }} ${{ env.DOCKER_URL }}
           docker build --build-arg docker_user=${{ secrets.DOCKER_USER }} --build-arg docker_pass=${{ secrets.DOCKER_PASS }} -t ${{ vars.APP_NAME }}:${{ inputs.AP_VER }} .
         env: 
           DOCKER_URL: https://${{ vars.DOCKER_HOST }}
