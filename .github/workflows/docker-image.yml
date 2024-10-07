@@ -1,0 +1,48 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      APP_VER:
+        description: "Input from the user for the Image Version"
+        required: true
+    secrets:
+      DOCKER_USER: 
+        required: true
+      DOCKER_PASS: 
+        required: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout from default branch 
+        uses: actions/checkout@v4
+      
+      - name: Create a Tag
+        uses: actions/github-script@v5
+        with: 
+          script: | 
+            github.rest.git.createRef {{
+            owner: context.repo.owner, 
+            ref: 'resf/tag/${{ inputs.APP_VER  }}
+            sha: context.sha
+            }}  
+          
+      - name: Image Build 
+        run: |
+          docker login -u ${{ secrets.DOCKER_USER }} -p ${{ DOCKER_PASS }} ${{ env.DOCKER_URL }}
+          docker build --build-arg docker_user=${{ secrets.DOCKER_USER }} --build-arg docker_pass=${{ secrets.DOCKER_PASS }} -t ${{ vars.APP_NAME }}:${{ inputs.AP_VER }} .
+        env: 
+          DOCKER_URL: https://${{ vars.DOCKER_HOST }}
+      
+      - name: Inage Publish 
+        run: | 
+          echo "Publishing " 
+          docker tag ${{ vars.APP_NAME }}:${{ inputs.APP_VER}}} ${{ vars.DOCKER_HOST }}/${{ vars.DOCKER_REPO }}/${{ vars.APP_NAME }}:${{ inputs.APP_VER }}
+          docker push $${{ vars.DOCKER_HOST }}/${{ vars.DOCKER_REPO }}/${{ vars.APP_NAME }}:${{ inputs.APP_VER }}
+
+          
