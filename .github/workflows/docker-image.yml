@@ -26,11 +26,11 @@ jobs:
         uses: actions/github-script@v5
         with: 
           script: | 
-            github.rest.git.createRef {{
+            github.rest.git.createRef ({ 
             owner: context.repo.owner, 
             ref: 'resf/tag/${{ inputs.APP_VER  }}
             sha: context.sha
-            }}  
+            })
           
       - name: Image Build 
         run: |
