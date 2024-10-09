@@ -28,3 +28,17 @@ jobs:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASS }} 
          
+      - name: Extract metadata (tags, labels) for Docker 
+        id: meta
+        uses: docker/metadata-action@v3
+        with: 
+            images: skyler21/kubernetes
+
+      - name: Build and push Docker image 
+        uses: docker/build-push-action@v3
+        with: 
+            context: .
+            push: true
+            tags: ${{ steps.meta.outputs.tags }}
+            labels: ${{ steps.meta.outputs.labels }}
+               
