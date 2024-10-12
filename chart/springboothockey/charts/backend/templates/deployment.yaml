@@ -48,7 +48,7 @@ spec:
             - name: "MYSQL_DATABASE"
               value: "db_nhl"  
             - name: "MYSQL_HOST"
-              value: "192.168.68.111" 
+              value: "10.0.0.114" 
             - name: "MYSQL_PORT"
               value: "3306"       
 ---

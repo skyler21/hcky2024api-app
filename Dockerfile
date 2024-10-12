@@ -8,8 +8,8 @@ RUN mvn -B package --file pom.xml -DskipTests
 #FROM openjdk:14-slim
 FROM eclipse-temurin:17-jdk-alpine
 VOLUME /tmp
-COPY --from=build /workspace/target/*jar-with-dependencies.jar app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+COPY --from=build /workspace/target/*.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
 
 
 #FROM eclipse-temurin:17-jdk-alpine

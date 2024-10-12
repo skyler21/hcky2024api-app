@@ -32,7 +32,7 @@ metadata:
   name: "mysqldeployment" 
 subsets: 
   - addresses:
-      - ip: "192.168.68.111" 
+      - ip: "10.0.0.114" 
     ports:
       - port: 3306 
         name: "mysqldeployment"

@@ -1,6 +1,6 @@
 image:
-  repository: skyler21/kubernetes2
-  tag: "1.0"
+  repository: skyler21/hcky2024api
+  tag: "latest"
 replicaCount: 1
 service:
   type: ClusterIP
