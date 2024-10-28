@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hockey.core.dao.TeamRepository;
 import com.hockey.core.model.Team;
 
-@CrossOrigin(origins = "http://localhost:4200")
+//   @CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*") // allow requests from any origin
 @RestController
 @RequestMapping("api")
 public class MainController {

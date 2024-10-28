@@ -1,5 +1,0 @@
-backend:
-  secret:
-    mysqldb_uri:
-      username: springuser
-      password: Qazwsx21$

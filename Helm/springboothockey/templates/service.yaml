@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: "{{ .Chart.Name }}-hockey-service"
+  name: "{{ .Chart.Name }}-hockey-service"
+spec:
+  type: ClusterIP
+  ports:
+    - protocol: "TCP"
+      port: 8085
+      targetPort: 8085
+  selector:
+    app: "{{ .Chart.Name }}-hockey-service"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: "{{ .Chart.Name }}-mysql-service"
+spec:
+  ports:
+    - name: tcp
+      protocol: "TCP"
+      port: 3306
+      targetPort: 3306 
+      nodePort: 0
+  selector: {}
+---
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: "{{ .Chart.Name }}-mysql-service" 
+subsets: 
+ - addresses:
+     - ip: "10.0.0.114" 
+   ports:
+     - port: 3306 
+       name: "mysqlservice-port"
+---
