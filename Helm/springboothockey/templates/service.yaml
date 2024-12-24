@@ -11,7 +11,7 @@ spec:
       port: 8085
       targetPort: 8085
   selector:
-    app: "{{ .Chart.Name }}-hockey-service"
+    app: "{{ .Chart.Name }}-deployment"
 ---
 kind: Service
 apiVersion: v1
@@ -32,7 +32,7 @@ metadata:
   name: "{{ .Chart.Name }}-mysql-service" 
 subsets: 
  - addresses:
-     - ip: "10.0.0.114" 
+     - ip: "10.0.0.126" 
    ports:
      - port: 3306 
        name: "mysqlservice-port"

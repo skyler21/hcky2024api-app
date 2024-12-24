@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import com.hockey.core.model.Game;
 import com.hockey.core.model.Team;
 
 
@@ -19,4 +20,9 @@ public interface TeamRepository extends CrudRepository<Team, Integer> {
 			)
 	void truncateTeam();
 
+	@Query(
+		value = "select full_name from team WHERE team_id = ?1", 
+		nativeQuery = true
+	  )
+    String findNameByTeamId(int pkid);
 }

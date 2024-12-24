@@ -27,6 +27,7 @@ import com.hockey.core.dao.GameRepository;
 import com.hockey.core.dao.RosterRepository;
 import com.hockey.core.model.Game;
 import com.hockey.core.model.Roster;
+import com.hockey.core.ReferenceData;
 
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -190,6 +191,8 @@ public class NhlApiController {
 		logger.debug("loadDBGames has been reached");
 
 		try {
+			ReferenceData refData = new ReferenceData();
+
 
 			URL url = new URL("https://api.nhle.com/stats/rest/en/game");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -236,8 +239,10 @@ public class NhlApiController {
 					nGame.setGameScheduleStateId(gameArray.getJSONObject(i).getInt("gameScheduleStateId"));
 					nGame.setGameStateId(gameArray.getJSONObject(i).getInt("gameStateId"));
 					nGame.setGameType(gameArray.getJSONObject(i).getInt("gameType"));
+					nGame.setGameTypeDesc(refData.getGameType(gameArray.getJSONObject(i).getInt("gameType")));
 					nGame.setHomeScore(gameArray.getJSONObject(i).getInt("homeScore"));
 					nGame.setHomeTeamId(gameArray.getJSONObject(i).getInt("homeTeamId"));
+					nGame.setHomeTeamFullName(teamRepository.findNameByTeamId(gameArray.getJSONObject(i).getInt("homeTeamId")));
 					
 					if ((gameArray.getJSONObject(i).getInt("gameStateId")) == 1) {
 						nGame.setPeriod(0);
@@ -249,7 +254,8 @@ public class NhlApiController {
 					nGame.setSeason(gameArray.getJSONObject(i).getInt("season"));
 					nGame.setVisitingScore(gameArray.getJSONObject(i).getInt("visitingScore"));
 					nGame.setVisitingTeamId(gameArray.getJSONObject(i).getInt("visitingTeamId"));
-		   		    logger.debug("GAME " + nGame);
+					nGame.setVisitingTeamFullName(teamRepository.findNameByTeamId(gameArray.getJSONObject(i).getInt("visitingTeamId")));
+					logger.debug("GAME " + nGame);
 					gameRepository.save(nGame);
 				}
 			}

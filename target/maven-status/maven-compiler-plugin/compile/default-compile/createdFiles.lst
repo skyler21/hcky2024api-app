@@ -1,8 +1,8 @@
 com/hockey/core/HockeySqlApplication.class
-com/hockey/core/dao/GameRepository.class
 com/hockey/core/model/Team.class
-com/hockey/core/dao/FranchiseRepository.class
+com/hockey/core/dao/GameRepository.class
 com/hockey/core/dao/TeamRepository.class
+com/hockey/core/dao/FranchiseRepository.class
 com/hockey/core/model/Franchise.class
 com/hockey/core/model/Roster.class
 com/hockey/core/NhlApiController.class
@@ -10,3 +10,4 @@ com/hockey/core/NhlDbController.class
 com/hockey/core/dao/RosterRepository.class
 com/hockey/core/MainController.class
 com/hockey/core/model/Game.class
+com/hockey/core/ReferenceData.class

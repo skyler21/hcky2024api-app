@@ -6,7 +6,9 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.4</version>
+		<!-- version>2.5.4</version -->
+		<!-- version>2.7.18</version -->
+		<version>3.0.10</version>
 		<relativePath /> <!-- lookup parent from repository -->
 
 		<!-- curl localhost:8085/api/load/teams -->
@@ -22,6 +24,7 @@
 		<!-- https://api-web.nhle.com/v1/roster/" + teamAbbrv + "/current" --> 
 		<!-- https://api.nhle.com/stats/rest/en/team -->
 		<!-- https://api.nhle.com/stats/rest/en/team -->
+		
 	
 		
 		
@@ -33,7 +36,7 @@
 		<!-- curl localhost:8085/db/get/teams              --> 
 		<!-- curl localhost:8085/db/get/games              --> 
 		<!-- curl localhost:8085/db/get/standings            --> 
-		<!-- curl localhost:8085/db/get/dateGames/gameDate=2022-11-11-->
+		<!-- curl localhost:8085/db/get/gamesByDate/gameDate=2024-11-24 -->
 		<!-- curl localhost:8085/db/get/teamGames/gameTeam=22 -->
 		<!-- curl localhost:8085/api/update/players/updateDate=2022-12-28 -->
 		                      
@@ -48,7 +51,8 @@
 	<name>hockeySql</name>
 	<description>Spring Boot mysql</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<!-- java.version>1.8</java.version -->
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -68,6 +72,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.31</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -85,7 +90,7 @@
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20210307</version>
-		</dependency>
+		</dependency>		
 	</dependencies>
 
 	<build>

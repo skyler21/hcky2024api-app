@@ -1,9 +1,9 @@
 package com.hockey.core.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class Game {
@@ -18,17 +18,21 @@ public class Game {
 	private Integer gameScheduleStateId;
 	private Integer gameStateId;
 	private Integer gameType;
+	private String  gameTypeDesc;
 	private Integer homeScore;
 	private Integer homeTeamId;
+	private String  homeTeamFullName;
 	private Integer period;
 	private Integer season;
 	private Integer visitingScore;
 	private Integer visitingTeamId;
+	private String  visitingTeamFullName;
+	private String  lastPeriodType;
 	
 	public Game() {
 	}
 
-	public Game(Integer id, Integer gameId, String easternStartTime, String gameDate, Integer gameNumber, Integer gameScheduleStateId, Integer gameStateId, Integer gameType, Integer homeScore, Integer homeTeamId, Integer period, Integer season, Integer visitingScore, Integer visitingTeamId) {
+	public Game(Integer id, Integer gameId, String easternStartTime, String gameDate, Integer gameNumber, Integer gameScheduleStateId, Integer gameStateId, Integer gameType, String gameTypeDesc, Integer homeScore, Integer homeTeamId, String homeTeamFullName, Integer period, Integer season, Integer visitingScore, Integer visitingTeamId, String visitingTeamFullName, String lastPeriodType) {
 		super();
 		this.id = id;
 		this.gameId = gameId;
@@ -38,23 +42,26 @@ public class Game {
 		this.gameScheduleStateId = gameScheduleStateId;
 		this.gameStateId = gameStateId;
 		this.gameType = gameType;
+		this.gameTypeDesc = gameTypeDesc;
 		this.homeScore = homeScore;
 		this.homeTeamId = homeTeamId;
+		this.homeTeamFullName = homeTeamFullName;
 		this.period = period;
 		this.season = season;
 		this.visitingScore = visitingScore;
 		this.visitingTeamId = visitingTeamId;
-	
-
+		this.visitingTeamFullName = visitingTeamFullName;
+		this.lastPeriodType = lastPeriodType; 
+		
 	}
 
 	@Override
 	public String toString() {
 		return "Game [id=" + id + ", gameId=" + gameId + ", easternStartTime=" + easternStartTime + ", gameDate="
 				+ gameDate + ", gameNumber=" + gameNumber + ", gameScheduleStateId=" + gameScheduleStateId
-				+ ", gameStateId=" + gameStateId + ", gameType=" + gameType + ", homeScore=" + homeScore
-				+ ", homeTeamId=" + homeTeamId + ", period=" + period + ", season=" + season + ", visitingScore="
-				+ visitingScore + ", visitinfTeamId=" + visitingTeamId + "]";
+				+ ", gameStateId=" + gameStateId + ", gameType=" + gameType + ", gameTypeDesc=" + gameTypeDesc + ", homeScore=" + homeScore
+				+ ", homeTeamId=" + homeTeamId + ", homeTeamFullName=" + homeTeamFullName + ", period=" + period + ", season=" + season + ", visitingScore="
+				+ visitingScore + ", visitingTeamId=" + visitingTeamId + ", visitingTeamFullName=" + visitingTeamFullName + ", lastPeriodType=" + lastPeriodType +  "]" ;
 	}
 
 	public Integer getId() {
@@ -121,6 +128,14 @@ public class Game {
 		this.gameType = gameType;
 	}
 
+	public String getGameTypeDesc() {
+		return gameTypeDesc;
+	}
+
+	public void setGameTypeDesc(String gameTypeDesc) {
+		this.gameTypeDesc = gameTypeDesc;
+	}
+
 	public Integer getHomeScore() {
 		return homeScore;
 	}
@@ -135,6 +150,14 @@ public class Game {
 
 	public void setHomeTeamId(Integer homeTeamId) {
 		this.homeTeamId = homeTeamId;
+	}
+
+	public String getHomeTeamFullName() {
+		return homeTeamFullName;
+	}
+
+	public void setHomeTeamFullName(String homeTeamFullName) {
+		this.homeTeamFullName = homeTeamFullName;
 	}
 
 	public Integer getPeriod() {
@@ -167,6 +190,22 @@ public class Game {
 
 	public void setVisitingTeamId(Integer visitingTeamId) {
 		this.visitingTeamId = visitingTeamId;
+	}
+
+	public String getVisitingTeamFullName() {
+		return visitingTeamFullName;
+	}
+
+	public void setVisitingTeamFullName(String visitingTeamFullName) {
+		this.visitingTeamFullName = visitingTeamFullName;
+	}
+
+	public String getLastPeriodType() {
+		return lastPeriodType;
+	}
+
+	public void setLastPeriodType(String lastPeriodType) {
+		this.lastPeriodType = lastPeriodType;
 	}
 
 
