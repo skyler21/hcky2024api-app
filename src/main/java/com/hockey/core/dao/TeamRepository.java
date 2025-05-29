@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.hockey.core.model.Game;
+//import com.hockey.core.model.Game;
 import com.hockey.core.model.Team;
 
 
@@ -25,4 +25,10 @@ public interface TeamRepository extends CrudRepository<Team, Integer> {
 		nativeQuery = true
 	  )
     String findNameByTeamId(int pkid);
+
+	@Query(
+		value = "select tri_code from team WHERE team_id = ?1", 
+		nativeQuery = true
+	  )
+    String findAbbrByTeamId(int pkid);
 }

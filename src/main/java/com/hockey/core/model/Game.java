@@ -28,11 +28,15 @@ public class Game {
 	private Integer visitingTeamId;
 	private String  visitingTeamFullName;
 	private String  lastPeriodType;
+	private Integer homeSog;
+	private Integer visitingSog;
+	
+
 	
 	public Game() {
 	}
 
-	public Game(Integer id, Integer gameId, String easternStartTime, String gameDate, Integer gameNumber, Integer gameScheduleStateId, Integer gameStateId, Integer gameType, String gameTypeDesc, Integer homeScore, Integer homeTeamId, String homeTeamFullName, Integer period, Integer season, Integer visitingScore, Integer visitingTeamId, String visitingTeamFullName, String lastPeriodType) {
+	public Game(Integer id, Integer gameId, String easternStartTime, String gameDate, Integer gameNumber, Integer gameScheduleStateId, Integer gameStateId, Integer gameType, String gameTypeDesc, Integer homeScore, Integer homeTeamId, String homeTeamFullName, Integer period, Integer season, Integer visitingScore, Integer visitingTeamId, String visitingTeamFullName, String lastPeriodType, Integer homeSog, Integer visitingSog) {
 		super();
 		this.id = id;
 		this.gameId = gameId;
@@ -52,6 +56,8 @@ public class Game {
 		this.visitingTeamId = visitingTeamId;
 		this.visitingTeamFullName = visitingTeamFullName;
 		this.lastPeriodType = lastPeriodType; 
+		this.homeSog = homeSog; 
+		this.visitingSog = visitingSog; 
 		
 	}
 
@@ -61,7 +67,7 @@ public class Game {
 				+ gameDate + ", gameNumber=" + gameNumber + ", gameScheduleStateId=" + gameScheduleStateId
 				+ ", gameStateId=" + gameStateId + ", gameType=" + gameType + ", gameTypeDesc=" + gameTypeDesc + ", homeScore=" + homeScore
 				+ ", homeTeamId=" + homeTeamId + ", homeTeamFullName=" + homeTeamFullName + ", period=" + period + ", season=" + season + ", visitingScore="
-				+ visitingScore + ", visitingTeamId=" + visitingTeamId + ", visitingTeamFullName=" + visitingTeamFullName + ", lastPeriodType=" + lastPeriodType +  "]" ;
+				+ visitingScore + ", visitingTeamId=" + visitingTeamId + ", visitingTeamFullName=" + visitingTeamFullName + ", lastPeriodType=" + lastPeriodType + ", homeSog=" + homeSog + ", visitingSog=" + visitingSog +  "]" ;
 	}
 
 	public Integer getId() {
@@ -184,7 +190,7 @@ public class Game {
 		this.visitingScore = visitingScore;
 	}
 
-	public Integer getVisitinfTeamId() {
+	public Integer getVisitingTeamId() {
 		return visitingTeamId;
 	}
 
@@ -206,6 +212,22 @@ public class Game {
 
 	public void setLastPeriodType(String lastPeriodType) {
 		this.lastPeriodType = lastPeriodType;
+	}
+
+	public Integer getHomeSog() {
+		return homeSog;
+	}
+
+	public void setHomeSog(Integer homeSog) {
+		this.homeSog = homeSog;
+	}
+	
+	public Integer getVisitingSog() {
+		return visitingSog;
+	}
+
+	public void setVisitingSog(Integer visitingSog) {
+		this.visitingSog = visitingSog;
 	}
 
 

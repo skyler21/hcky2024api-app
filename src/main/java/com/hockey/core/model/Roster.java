@@ -23,11 +23,12 @@ public class Roster {
 	private String birthCity;
 	private String birthCountry;
 	private String birthStateProvince;
-
+	private String teamAbbr;
+	
 	public Roster() {
 	}
 
-	public Roster(Integer id, Integer rosterId, String firstName, String lastName, Integer sweaterNumber, String positionCode, String shootsCatches, Integer heightInches, Integer weightPounds, String birthDate, String birthCity, String birthCountry, String birthStateProvince) {
+	public Roster(Integer id, Integer rosterId, String firstName, String lastName, Integer sweaterNumber, String positionCode, String shootsCatches, Integer heightInches, Integer weightPounds, String birthDate, String birthCity, String birthCountry, String birthStateProvince, String teamAbbr) {
 		super();
 		this.id = id;
 		this.rosterId = rosterId;
@@ -42,6 +43,7 @@ public class Roster {
 		this.birthCity = birthCity;
 		this.birthCountry = birthCountry;
 		this.birthStateProvince = birthStateProvince;
+		this.teamAbbr = teamAbbr;
 	
 	}
 
@@ -51,7 +53,7 @@ public class Roster {
 				+ ", sweaterNumber=" + sweaterNumber + ", positionCode=" + positionCode + ", shootsCatches="
 				+ shootsCatches + ", heightInches=" + heightInches + ", weightPounds=" + weightPounds + ", birthDate="
 				+ birthDate + ", birthCity=" + birthCity + ", birthCountry=" + birthCountry + ", birthStateProvince="
-				+ birthStateProvince + "]";
+				+ birthStateProvince + ", teamAbbr=" + teamAbbr + "]";
 	}
 
 	public Integer getId() {
@@ -158,5 +160,12 @@ public class Roster {
 		this.birthStateProvince = birthStateProvince;
 	}
 
+	public void setTeamAbbr(String teamAbbr) {
+		this.teamAbbr = teamAbbr;
+	}
+
+	public String getTeamAbbr() {
+		return teamAbbr;
+	}
 	
 }

@@ -1,11 +1,8 @@
 package com.hockey.core;
 
-import java.lang.ref.Reference;
 import java.util.List;
-import java.util.Map;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,11 +13,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.hockey.core.dao.TeamRepository;
 import com.hockey.core.dao.GameRepository;
+import com.hockey.core.dao.RosterdefenseRepository;
+import com.hockey.core.dao.RosterforwardRepository;
+import com.hockey.core.dao.RostergoalieRepository;
 import com.hockey.core.dao.FranchiseRepository;
+import com.hockey.core.dao.StandingRepository;
+
 
 import com.hockey.core.model.Team;
 import com.hockey.core.model.Game;
+import com.hockey.core.model.Rostergoalie;
+import com.hockey.core.model.Rosterforward;
+import com.hockey.core.model.Rosterdefense;
 import com.hockey.core.model.Franchise;
+import com.hockey.core.model.Standing;
+
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -33,7 +40,15 @@ public class NhlDbController {
 	GameRepository gameRepository;
 	@Autowired
 	FranchiseRepository franchiseRepository;
-
+	@Autowired
+	StandingRepository standingRepository;
+    @Autowired
+	RostergoalieRepository rostergoalieRepository;
+	@Autowired
+	RosterdefenseRepository rosterdefenseRepository;
+	@Autowired
+	RosterforwardRepository rosterforwardRepository;
+	
 	@RequestMapping(value = "/db/get/teams", method = { RequestMethod.POST, RequestMethod.GET })
 	@Transactional
 	public List<Team> getAllTeams() {
@@ -50,7 +65,8 @@ public class NhlDbController {
 		return (List<Game>) gameRepository.findAll();
 	}
 
-	@RequestMapping(value = "/db/get/gamesByDate/gameDate={inputDate}", method = { RequestMethod.POST, RequestMethod.GET })
+	@RequestMapping(value = "/db/get/gamesByDate/gameDate={inputDate}", method = { RequestMethod.POST,
+			RequestMethod.GET })
 	@Transactional
 	public List<Game> getByGameDate(@PathVariable("inputDate") String inputDate) {
 		// This returns a JSON or XML with the users
@@ -67,25 +83,29 @@ public class NhlDbController {
 		return (List<Franchise>) franchiseRepository.findAll();
 	}
 
-	//@RequestMapping(value = "/reference/get/allGameTypes", method = { RequestMethod.POST, RequestMethod.GET })
-	//@Transactional
-	//public List<String> getAllGameTypes() {
-   	// This returns a JSON or XML with the users
-    //		logger.debug("getAllGameTypes has been reached");
-	//	return (List<String>) ReferenceData.getAllGameTypes();
-	//}
+	// @RequestMapping(value = "/reference/get/allGameTypes", method = {
+	// RequestMethod.POST, RequestMethod.GET })
+	// @Transactional
+	// public List<String> getAllGameTypes() {
+	// This returns a JSON or XML with the users
+	// logger.debug("getAllGameTypes has been reached");
+	// return (List<String>) ReferenceData.getAllGameTypes();
+	// }
 
-	//   curl command is like this - has to be in double quotes on the cmd line 
-	// curl "http://localhost:8085/db/get/findGames?gameSeason=20242025&gameType=Regular&gameTeam=NONE&gameDate=NONE"
-    // curl "http://localhost:8085/db/get/findGames?gameSeason=20242025&gameType=Regular&gameTeam=Columbus%20Blue%20Jackets&gameDate=NONE"
-    // curl "http://localhost:8085/db/get/findGames?gameSeason=20242025&gameType=Regular&gameTeam=NONE&gameDate=2024-12-18"
-	
-    @RequestMapping(value = "/db/get/findGames", method = { RequestMethod.GET })
+	// curl command is like this - has to be in double quotes on the cmd line
+	// curl
+	// "http://localhost:8085/db/get/findGames?gameSeason=20242025&gameType=Regular&gameTeam=NONE&gameDate=NONE"
+	// curl
+	// "http://localhost:8085/db/get/findGames?gameSeason=20242025&gameType=Regular&gameTeam=Columbus%20Blue%20Jackets&gameDate=NONE"
+	// curl
+	// "http://localhost:8085/db/get/findGames?gameSeason=20242025&gameType=Regular&gameTeam=NONE&gameDate=2024-12-18"
+
+	@RequestMapping(value = "/db/get/findGames", method = { RequestMethod.GET })
 	@Transactional
 	public List<Game> getFindGames(@RequestParam("gameSeason") String pkseason,
-	                               @RequestParam("gameType") String pktype,
-								   @RequestParam("gameTeam") String pkteam,
-								   @RequestParam("gameDate") String pkdate) {
+			@RequestParam("gameType") String pktype,
+			@RequestParam("gameTeam") String pkteam,
+			@RequestParam("gameDate") String pkdate) {
 
 		// This returns a JSON or XML with the users
 		logger.debug("getFindGames has been reached");
@@ -93,18 +113,18 @@ public class NhlDbController {
 		logger.debug("gameType = " + pktype);
 		logger.debug("gameTeam = " + pkteam);
 		logger.debug("gameDate = " + pkdate);
-        if ((pkdate.equals("NONE")) || (pkdate.equals(""))) {
+		if ((pkdate.equals("NONE")) || (pkdate.equals(""))) {
 			logger.debug("pkdate is equal NONE");
-			pkdate = "%"; 
+			pkdate = "%";
 		}
 		if (pkteam.equals("NONE")) {
 			logger.debug("pkteam is equal NONE");
-			pkteam = "%"; 
-	   } 
+			pkteam = "%";
+		}
 
 		return (List<Game>) gameRepository.findGameByAny(pkseason, pkdate, pktype, pkteam);
 	}
-  
+
 	@RequestMapping(value = "/db/get/allGameSeasons", method = { RequestMethod.POST, RequestMethod.GET })
 	@Transactional
 	public List<String> getAllGameSeasons() {
@@ -127,6 +147,46 @@ public class NhlDbController {
 		// This returns a JSON or XML with the users
 		logger.debug("getAllGameTypes has been reached");
 		return (List<String>) gameRepository.findGameTypes();
+	}
+
+	@RequestMapping(value = "/db/get/standings", method = { RequestMethod.POST, RequestMethod.GET })
+	@Transactional
+	public List<Standing> getStandings() {
+		// This returns a JSON or XML with the users
+		logger.debug("getStandings has been reached");
+		return (List<Standing>) standingRepository.getSortedStandings();
+	}
+
+	@RequestMapping(value = "/db/get/winPercent", method = { RequestMethod.POST, RequestMethod.GET })
+	@Transactional
+	public List<Standing> getWinPercent() {
+		// This returns a JSON or XML with the users
+		logger.debug("getWinPercent has been reached");
+		return (List<Standing>) standingRepository.getSortedWinPercent();
+	}
+
+	@RequestMapping(value = "/db/get/goalieRoster", method = { RequestMethod.POST, RequestMethod.GET })
+	@Transactional
+	public List<Rostergoalie> getGoalieRoster() {
+		// This returns a JSON or XML with the results
+		logger.debug("getGoalieRoster has been reached");
+		return (List<Rostergoalie>) rostergoalieRepository.getGoalieRoster();
+	}
+
+	@RequestMapping(value = "/db/get/forwardRoster", method = { RequestMethod.POST, RequestMethod.GET })
+	@Transactional
+	public List<Rosterforward> getForwardRoster() {
+		// This returns a JSON or XML with the results
+		logger.debug("getForwardRoster has been reached");
+		return (List<Rosterforward>) rosterforwardRepository.getForwardRoster();
+	}
+
+	@RequestMapping(value = "/db/get/defenseRoster", method = { RequestMethod.POST, RequestMethod.GET })
+	@Transactional
+	public List<Rosterdefense> getDefenseRoster() {
+		// This returns a JSON or XML with the results
+		logger.debug("getDefenseRoster has been reached");
+		return (List<Rosterdefense>) rosterdefenseRepository.getDefenseRoster();
 	}
 
 }

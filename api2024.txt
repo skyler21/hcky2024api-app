@@ -653,6 +653,8 @@ Report types:
 Team Stats
 GET https://api.nhle.com/stats/rest/en/team | Base end point
 
+like this ...https://api.nhle.com/stats/rest/en/team/summary
+
 Report types: 
 
 /summary?
